@@ -352,6 +352,7 @@ void PairTersoff::allocate()
   memory->create(setflag,n+1,n+1,"pair:setflag");
   memory->create(cutsq,n+1,n+1,"pair:cutsq");
   memory->create(neighshort,maxshort,"pair:neighshort");
+  memory->create(scale,n+1,n+1,"pair:scale");
   map = new int[n+1];
 }
 
