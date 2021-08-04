@@ -264,6 +264,11 @@ void PairSW::coeff(int narg, char **arg)
 
   read_file(arg[2]);
   setup_params();
+
+  int n = atom->ntypes;
+  for (int ii = 0; ii < n+1; ii++)
+    for (int jj = 0; jj < n+1; jj++)
+      scale[ii][jj] = 1.0;
 }
 
 /* ----------------------------------------------------------------------
